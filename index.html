@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#4caf8a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Health Saathi">
+  <meta name="description" content="Health Saathi – Your personal health companion. Track BP, sugar, weight, water, medicines & more offline.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+  <title>Health Saathi</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- SPLASH -->
+  <div id="splash">
+    <div class="splash-logo">
+      <svg viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="30" fill="#4caf8a" opacity="0.15"/>
+        <path d="M32 48s-14-8.5-14-18.5C18 23 22 19 26.5 19c2.8 0 4.8 1.5 5.5 3 0.7-1.5 2.7-3 5.5-3C42 19 46 23 46 29.5 46 39.5 32 48 32 48z" fill="#4caf8a"/>
+        <polyline points="10,36 18,36 22,28 26,42 30,32 34,36 54,36" stroke="#3d8b6e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="splash-title">Health Saathi</div>
+    <div class="splash-sub">Your personal health companion</div>
+  </div>
+
+  <!-- APP -->
+  <div id="app">
+    <header class="app-header">
+      <div class="header-brand">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M16 26s-8-5-8-11c0-3.5 2.5-6 5.5-6 1.8 0 3 1 3.5 2 0.5-1 1.7-2 3.5-2 3 0 5.5 2.5 5.5 6 0 6-8 11-8 11z" fill="#4caf8a"/>
+          <polyline points="4,18 8,18 10,14 12,22 14,16 16,18 28,18" stroke="#3d8b6e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        <h1>Health Saathi</h1>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" id="btn-lang" title="Language" aria-label="Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <button class="icon-btn" id="btn-search" title="Search" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="search-bar" id="search-bar">
+      <input type="search" id="search-input" placeholder="Search..." autocomplete="off">
+    </div>
+
+    <!-- PAGES -->
+    <div id="page-home" class="page active"></div>
+    <div id="page-records" class="page"></div>
+    <div id="page-medicines" class="page"></div>
+    <div id="page-profile" class="page"></div>
+    <div id="page-settings" class="page"></div>
+    <div id="page-bp" class="page"></div>
+    <div id="page-sugar" class="page"></div>
+    <div id="page-weight" class="page"></div>
+    <div id="page-water" class="page"></div>
+    <div id="page-appointments" class="page"></div>
+    <div id="page-favorites" class="page"></div>
+    <div id="page-history" class="page"></div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-page="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </button>
+    <button class="nav-item" data-page="records">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <span>Records</span>
+    </button>
+    <button class="nav-item" data-page="medicines">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.5 20.5L3.5 13.5a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 0l7 7a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7 0z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg>
+      <span>Medicines</span>
+    </button>
+    <button class="nav-item" data-page="profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </button>
+    <button class="nav-item" data-page="settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      <span>Settings</span>
+    </button>
+  </nav>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
